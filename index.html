@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>HTTPCast</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      :root {
+        --dark: #26282a;
+        --primary: #6b74f7;
+      }
+
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+      }
+
+      body {
+        -webkit-font-smoothing: antialiased;
+        margin: 0;
+        padding: 0;
+        background: var(--dark);
+        font-family: 'Rubik', sans-serif;
+      }
+
+      .hero {
+        padding: 2rem 0;
+        background: var(--primary);
+        text-align: center;
+      }
+
+      .logo {
+        margin-bottom: 1rem;
+      }
+
+      a.button {
+        position: relative;
+        display: inline-block;
+        background: white;
+        color: black;
+        border: 4px solid var(--dark);
+        font-family: 'Press Start 2P';
+        padding: 16px 20px;
+        text-decoration: none;
+        text-align: center;
+        font-size: 16px;
+      }
+
+      a.button::after {
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        bottom: 0px;
+        left: 0px;
+        content: '';
+        box-shadow: inset -4px -4px #ccc;
+      }
+
+      .subtitle {
+        margin: 1.5rem auto;
+        max-width: 600px;
+        font-weight: 400;
+        color: white;
+        font-size: 2rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="hero">
+      <div class="logo">
+        <img src="httpcast.png" alt="HTTPCast" />
+      </div>
+      <nav>
+        <a href="#!" class="button">Episodes</a>
+        <a href="#!" class="button">Apple Podcasts</a>
+        <a href="#!" class="button">Google Podcasts</a>
+        <a href="#!" class="button">Twitter</a>
+        <a href="#!" class="button">Contact</a>
+      </nav>
+
+      <h2 class="subtitle">
+        <b>HTTPCast</b> is the podcast where Tania talks to people.
+      </h2>
+    </div>
+  </body>
+</html>
