@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>HTTPCast</title>
+    <title>HTTPCast | Hosted by Tania Rascia</title>
 
     <link
       href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;600;700&display=swap"
@@ -15,10 +15,14 @@
       rel="stylesheet"
     />
 
+    <link rel="icon" href="favicon.png" sizes="16x16" type="image/png" />
+
     <style>
       :root {
         --dark: #26282a;
+        --light: #f8f9fa;
         --primary: #6b74f7;
+        --primary-dark: #555cc5;
       }
 
       *,
@@ -33,10 +37,33 @@
         padding: 0;
         background: var(--dark);
         font-family: 'Rubik', sans-serif;
+        color: var(--light);
+        line-height: 1.4;
+      }
+
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+
+      h2 {
+        font-size: 2rem;
+        font-weight: 700;
+      }
+
+      h3 {
+        font-size: 1.6rem;
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding-left: 1rem;
+        padding-right: 1rem;
       }
 
       .hero {
-        padding: 2rem 0;
+        padding: 3.5rem 0;
         background: var(--primary);
         text-align: center;
       }
@@ -45,17 +72,28 @@
         margin-bottom: 1rem;
       }
 
+      .logo img {
+        width: 256px;
+        height: 256px;
+      }
+
+      a {
+        color: var(--light);
+        text-decoration: none;
+      }
+
       a.button {
         position: relative;
         display: inline-block;
         background: white;
-        color: black;
+        color: var(--dark);
         border: 4px solid var(--dark);
         font-family: 'Press Start 2P';
         padding: 16px 20px;
         text-decoration: none;
         text-align: center;
         font-size: 16px;
+        margin: 4px 0;
       }
 
       a.button::after {
@@ -68,31 +106,199 @@
         box-shadow: inset -4px -4px #ccc;
       }
 
+      a.button:hover {
+        background: #eee;
+        transform: translate3D(0, -1px, 0);
+      }
+
+      a.button:hover::after {
+        box-shadow: inset -4px -4px #aaa;
+      }
+
+      a.button.secondary {
+        background: var(--primary);
+        color: var(--light);
+        border: 4px solid black;
+      }
+
+      a.button.secondary::after {
+        box-shadow: inset -4px -4px var(--primary-dark);
+      }
+
+      a.button.secondary:hover {
+        background: var(--primary-dark);
+        transform: translate3D(0, -1px, 0);
+      }
+
+      a.button:hover::after {
+        box-shadow: inset -4px -4px #3b4089;
+      }
+
+      aside nav {
+        display: flex;
+        flex-direction: column;
+      }
+
+      aside p {
+        font-size: 1.1rem;
+        color: #adb5bd;
+      }
+
+      section {
+        padding: 3.5rem 0;
+        display: grid;
+        grid-gap: 2rem;
+        grid-template-columns: 300px auto;
+        grid-template-rows: auto auto;
+      }
+
+      footer {
+        background: rgba(0, 0, 0, 0.2);
+        padding: 3.5rem 0;
+        text-align: center;
+      }
+
+      footer a {
+        border-radius: 12px;
+        display: inline-block;
+        padding: 1rem;
+      }
+
+      footer h3 {
+        margin-bottom: 0;
+      }
+
+      footer p {
+        margin-top: 0;
+        color: #adb5bd;
+        font-size: 1.2rem;
+      }
+
+      footer a:hover {
+        background: rgba(0, 0, 0, 0.2);
+      }
+
       .subtitle {
         margin: 1.5rem auto;
-        max-width: 600px;
+        max-width: 700px;
         font-weight: 400;
         color: white;
-        font-size: 2rem;
+        font-size: 1.8rem;
+      }
+
+      .avatar {
+        border-radius: 12px;
+      }
+
+      .episode {
+        background: rgba(255, 255, 255, 0.05);
+        margin: 1.5rem 0;
+        padding: 2rem;
+        border-radius: 12px;
+      }
+
+      .episode:first-of-type {
+        margin-top: 0;
+      }
+
+      .episode h3 {
+        margin-top: 0;
+        margin-bottom: 1rem;
+        font-size: 1.3rem;
+      }
+
+      .episode p {
+        color: #adb5bd;
+      }
+
+      .episode p:last-of-type {
+        margin-bottom: 0;
+      }
+
+      p.time {
+        color: rgba(255, 255, 255, 0.3);
+      }
+
+      .title {
+        margin: 0;
+        grid-column-start: 2;
       }
     </style>
   </head>
   <body>
-    <div class="hero">
-      <div class="logo">
-        <img src="httpcast.png" alt="HTTPCast" />
-      </div>
-      <nav>
-        <a href="#!" class="button">Episodes</a>
-        <a href="#!" class="button">Apple Podcasts</a>
-        <a href="#!" class="button">Google Podcasts</a>
-        <a href="#!" class="button">Twitter</a>
-        <a href="#!" class="button">Contact</a>
-      </nav>
+    <main>
+      <div class="hero">
+        <div class="container">
+          <div class="logo">
+            <img src="httpcast.png" alt="HTTPCast" />
+          </div>
 
-      <h2 class="subtitle">
-        <b>HTTPCast</b> is the podcast where Tania talks to people.
-      </h2>
-    </div>
+          <p class="subtitle">
+            <b>Tania Rascia</b> welcomes friends, designers, developers, and career
+            changers from all walks of life for casual conversations on <b>HTTPCast</b>.
+          </p>
+
+          <nav>
+            <a href="#!"><img src="apple.svg" width="250px" /></a>
+            <a href="#!"><img src="google.svg" width="250px" /></a>
+          </nav>
+        </div>
+      </div>
+      <section class="container">
+        <h2 class="title">Episodes</h2>
+        <aside>
+          <img src="tania.png" class="avatar" />
+          <h3>Hosted by Tania Rascia</h3>
+          <p>
+            I'm Tania, a software engineer, open-source creator, and former chef best
+            known for writing bullshit-free guides and tutorials.
+          </p>
+          <p>
+            Since I've met so many interesting people on my journey, I created
+            <b>HTTPCast</b> to share their unique stories.
+          </p>
+          <p>
+            <a
+              class="secondary button"
+              href="https://taniarascia.substack.com/subscribe"
+              target="_blank"
+              >Email Signup</a
+            >
+            <a class="secondary button" href="https://www.taniarascia.com" target="_blank"
+              >Website</a
+            >
+          </p>
+        </aside>
+
+        <article>
+          <div class="episodes">
+            <div class="episode">
+              <h3>Episode 1: Devin McIntyre</h3>
+              <p class="time">40 minutes &middot; August 28, 2020</p>
+              <p>Devin McIntyre is a senior software engineer at</p>
+            </div>
+
+            <div class="episode">
+              <h3>Episode 0: Chris Brennan (Pilot)</h3>
+              <p class="time">40 minutes &middot; August 28, 2020</p>
+              <p>
+                Chris Brennan is a designer and PHP developer at ImageBox, a web design
+                agency in Pittsburgh. Tania and Chris talk about odd jobs after college,
+                graveyard engraving, and his journey to become a self-taught developer.
+              </p>
+            </div>
+          </div>
+        </article>
+      </section>
+    </main>
+    <footer>
+      <nav>
+        <a href="#!">Apple Podcasts</a>
+        <a href="#!">Google Podcasts</a>
+        <a href="https://twitter.com/taniarascia">Twitter</a>
+      </nav>
+      <h3>HTTPCast</h3>
+      <p>Casual Conversations with Tania</p>
+    </footer>
   </body>
 </html>
